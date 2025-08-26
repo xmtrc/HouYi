@@ -1,5 +1,5 @@
 from constant.chromosome import Chromosome
-from util.openai_util import completion_with_chatgpt
+from util.llm_util import completion_with_llm
 
 
 def llm_mutation_generation(chromosome: Chromosome):
@@ -24,7 +24,7 @@ Provide a revised version that captures the essence and core
 message of the original prompt, ensuring clarity and coherence
 in the rephrased content.
     """
-    response = completion_with_chatgpt(mutation_generation_prompt)
+    response = completion_with_llm(mutation_generation_prompt)
 
     # split the response into three parts
     new_framework_prompt, new_separator_prompt, new_disruptor_prompt = (

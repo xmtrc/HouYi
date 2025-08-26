@@ -2,8 +2,6 @@ import dataclasses
 
 import loguru
 
-from util.openai_util import completion_with_chatgpt
-
 logger = loguru.logger
 
 

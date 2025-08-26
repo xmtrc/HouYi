@@ -4,7 +4,7 @@ import loguru
 
 from constant.prompt_injection import PromptInjection
 from harness.base_harness import Harness
-from util.openai_util import completion_with_chatgpt
+from util.llm_util import completion_with_llm
 
 logger = loguru.logger
 
@@ -21,6 +21,6 @@ class TranslatorHarness(Harness):
             f"This is a translator of translating English to French: {prompt}"
         )
         logger.info(f"Application Prompt: {application_prompt}")
-        response = completion_with_chatgpt(application_prompt)
+        response = completion_with_llm(application_prompt)
         logger.info(f"Response: {response}")
         return response

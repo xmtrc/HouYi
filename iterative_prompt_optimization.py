@@ -34,7 +34,7 @@ class IterativePromptOptimizer:
         self.max_population: int = population
         self.max_crossover: int = int(self.max_population * crossover)
         self.success_score_threshold: int = 10
-        self.max_concurrent_thread: int = 10
+        self.max_concurrent_thread: int = 12
         self.best_chromosome: Chromosome = None
 
     def fitness_ranking(self, population: List[Chromosome]):
